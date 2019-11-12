@@ -15,8 +15,8 @@ public class BadVersion {
     public static int firstBadVersion(int n) {
         int start = 0;
         int end = n-1;
-        int mid = start + (end - start)/2;
         while (start < end) {
+            int mid = start + (end - start)/2;
             if (isBadVersion(mid)) {
                 end = mid;
             } else {
