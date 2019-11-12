@@ -15,6 +15,8 @@ public class SumOfPair {
         //sumByPointers(arr,10);
         sumOfThreePair(arr,10);
     }
+
+    //sum by using hashMap.
     public static void getSumPairs(int[] arr, int k){
         HashMap<Integer,Integer> sMap = new HashMap<Integer,Integer>();
         for(int i = 0; i< arr.length; i++){
@@ -27,7 +29,7 @@ public class SumOfPair {
 
     }
 
-
+    // sum by two pointers
     public static void sumByPointers(int[] arr, int k){
         Arrays.sort(arr);
         int i =0, j = arr.length-1;
