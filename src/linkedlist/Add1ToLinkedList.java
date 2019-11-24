@@ -16,9 +16,7 @@ public class Add1ToLinkedList {
 
     public static int tailRecursion(Node node, int carry){
         if(node == null) return 0;
-        else
-        node.val = node.val + carry % 10;
-        return tailRecursion(node.next == null ? null : node.next,  carry + node.val/10);
+        return (node.val + tailRecursion(node.next == null ? null : node.next,  carry + node.val/10)) %10;
     }
 
     public static Node addOneToEnd(Node head){
