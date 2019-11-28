@@ -5,21 +5,6 @@ package linkedlist;
  */
 public class ReverseLinkedListModification {
 
-    public static Node reverse(Node head){
-        Node current = head;
-        Node prev = null;
-        Node next = head;
-        while(current != null){
-            next  = current.next;
-            //current pointing to previous node
-            current.next = prev;
-
-            prev = current;
-            current = next;
-        }
-        return prev;
-    }
-
 
     public static Node reverseUsingTmpNode(Node head){
         Node prev = null;
