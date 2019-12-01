@@ -10,7 +10,7 @@ public class UrifyString {
 
     public static String urifyString(String str){
         int count = 0;
-        for(int j=0; j < str.length()-1; j++){
+        for(int j=0; j < str.length(); j++){
             if(str.charAt(j) == ' '){
                 count++;
             }
@@ -18,14 +18,14 @@ public class UrifyString {
         int k = str.length()+  (2 * count);
         char result[] = new char[k];
         char[] array = str.toCharArray();
-        for(int i = str.length()-1; i>=0; i--){
+        for(int i = array.length ; i>=0; i--){
                 if(array[i] == ' '){
-                    result[k] = '0';
-                    result[k-1] ='2';
-                    result[k-2] = '%';
+                    result[k-1] = '0';
+                    result[k-2] ='2';
+                    result[k-3] = '%';
                     k = k-3;
                 }else {
-                    result[k] = array[i];
+                    result[k-1] = array[i];
                     k--;
                 }
         }
