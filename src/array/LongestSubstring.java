@@ -32,8 +32,6 @@ public class LongestSubstring {
                 set.add(ch);
             }
             return true;
-
-
     }
 
 
