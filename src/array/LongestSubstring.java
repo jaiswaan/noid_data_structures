@@ -18,7 +18,6 @@ public class LongestSubstring {
                 if( isUnique(s, i, j) ){
                    max = Math.max(max, j-i);
                 }
-
             }
         }
         return max;
